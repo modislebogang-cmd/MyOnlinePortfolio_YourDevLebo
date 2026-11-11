@@ -1,0 +1,3 @@
+when the website the opens it must ask whats your name with a button to submit the name 
+then when you click submit it must say {Submitted name} welcome YourDevlebo's Portfolio website then show glitch effect and searching for yourdevlebo on google map 
+then open home page

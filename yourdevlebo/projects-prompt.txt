@@ -1,0 +1,11 @@
+on my projects section add the following :
+					1. user must be able to view projects using github
+					2. user must be able to see if the website is under construction or completed or personal projects
+					3. user must be able to see the rating of website the rating must be done by owner of the website
+					
+the projects must be in floating card 
+
+on contact me page add the following :
+				1. contact me via email @ modislebogang@gmail.com or whatsapp me @ 0791503851
+				2. also show email and whatsapp icon
+				3. also show icons of social media(tiktok, facebook, github and linked in) and say availabe also on social media

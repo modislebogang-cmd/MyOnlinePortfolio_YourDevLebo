@@ -1,0 +1,8 @@
+build me a 3D online cv profile using using the provided images
+
+on welcome/home page should include the following:
+1. when the website opens it must show me opening the laptop and starting to code with background like the matrix
+2. the laptop must be 3D and when cursor is detected it must move in the direction of the cursor
+3. the laptop must show my image provided
+
+also let me know of any features that i can add to make more alive. 

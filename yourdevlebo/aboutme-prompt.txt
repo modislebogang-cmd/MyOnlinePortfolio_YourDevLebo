@@ -1,0 +1,10 @@
+add about me section linked with the about button on home section.
+
+when a user clicks about me button it opens a about me page
+
+then about me must include the following:
+					1. my photo
+					2. short summary about me
+					3. which technologies that i use to design/create website (show javascript logo, reactvite logo, github logo)
+
+when user scrolls from home about page then it must start to show the content of about me page
