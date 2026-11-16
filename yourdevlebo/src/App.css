@@ -1459,6 +1459,15 @@
   margin-top: clamp(28px, 4vh, 44px);
 }
 
+/* scroll up / scroll down pair at the bottom of a section */
+.section-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(28px, 4vh, 44px);
+}
+
 /* ---- projects: floating cards ------------------------------ */
 .project-grid {
   list-style: none;
@@ -1605,12 +1614,19 @@
   border: 1px solid rgba(0, 255, 102, 0.16);
 }
 
+/* GitHub + Vercel side by side under the card content */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  align-self: flex-start;
-  margin-top: 4px;
+  margin-top: 0;
   padding: 8px 14px;
   border-radius: 999px;
   font-size: 13px;

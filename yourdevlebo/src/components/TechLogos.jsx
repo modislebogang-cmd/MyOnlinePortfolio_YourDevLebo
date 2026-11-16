@@ -285,3 +285,18 @@ export function LinkedInLogo({ size = 48 }) {
     </svg>
   )
 }
+
+export function VercelLogo({ size = 48 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-label="Vercel"
+    >
+      {/* Vercel mark: an equilateral triangle */}
+      <path fill="#eafff2" d="M12 2.5 23 21H1L12 2.5Z" />
+    </svg>
+  )
+}

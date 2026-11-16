@@ -131,7 +131,10 @@ export default function Intro() {
       </div>
 
       <div ref={projectsRef}>
-        <Projects onContact={() => scrollTo(contactRef)} />
+        <Projects
+          onContact={() => scrollTo(contactRef)}
+          onBack={() => scrollTo(aboutRef)}
+        />
       </div>
 
       <div ref={contactRef}>

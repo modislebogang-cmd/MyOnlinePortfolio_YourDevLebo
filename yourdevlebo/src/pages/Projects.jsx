@@ -1,17 +1,18 @@
-import { GitHubLogo } from '../components/TechLogos'
+import { GitHubLogo, VercelLogo } from '../components/TechLogos'
 
 /**
  * Projects section, shown below the about section.
  *
  * Each project is a floating card with:
- *  1. a link to view the project on GitHub,
+ *  1. links to view the project on GitHub and on Vercel,
  *  2. a status badge — under construction / completed / personal project,
  *  3. a rating given by the site owner (out of 5).
  *
  * The list below is placeholder content: replace the entries with your real
  * repositories, statuses and ratings.
  *
- * `onContact` scrolls down to the contact section.
+ * `onContact` scrolls down to the contact section, `onBack` scrolls up to the
+ * about section.
  */
 const PROJECTS = [
   {
@@ -19,6 +20,7 @@ const PROJECTS = [
     description:
       'This site — a 3D laptop intro, a scroll-revealed about section and a neon terminal theme.',
     repo: 'https://github.com/yourdevlebo',
+    live: 'https://yourdevlebo.vercel.app',
     status: 'completed',
     rating: 5,
     tags: ['React', 'Vite', 'CSS'],
@@ -28,6 +30,7 @@ const PROJECTS = [
     description:
       'A small productivity app for keeping track of daily tasks, with local storage and dark mode.',
     repo: 'https://github.com/yourdevlebo',
+    live: 'https://yourdevlebo.vercel.app',
     status: 'under-construction',
     rating: 3,
     tags: ['React', 'Firebase'],
@@ -37,6 +40,7 @@ const PROJECTS = [
     description:
       'A personal project that pulls live weather data and shows a 5-day forecast for any city.',
     repo: 'https://github.com/yourdevlebo',
+    live: 'https://yourdevlebo.vercel.app',
     status: 'personal',
     rating: 4,
     tags: ['JavaScript', 'API'],
@@ -69,7 +73,7 @@ function Stars({ rating }) {
   )
 }
 
-export default function Projects({ onContact }) {
+export default function Projects({ onContact, onBack }) {
   return (
     <section className="projects-section" aria-label="Projects">
       <div className="projects-inner">
@@ -98,27 +102,49 @@ export default function Projects({ onContact }) {
                 ))}
               </ul>
 
-              <a
-                className="project-link"
-                href={project.repo}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <GitHubLogo size={20} />
-                View on GitHub
-                <span aria-hidden="true">↗</span>
-              </a>
+              <div className="project-links">
+                <a
+                  className="project-link"
+                  href={project.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <GitHubLogo size={20} />
+                  View on GitHub
+                  <span aria-hidden="true">↗</span>
+                </a>
+
+                <a
+                  className="project-link"
+                  href={project.live}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <VercelLogo size={20} />
+                  View on Vercel
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </li>
           ))}
         </ul>
 
-        <button
-          type="button"
-          className="scroll-hint section-next"
-          onClick={onContact}
-        >
-          contact me ▾
-        </button>
+        <div className="section-nav">
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={onBack}
+          >
+            <span aria-hidden="true">↑</span> scroll up
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={onContact}
+          >
+            scroll down ▾
+          </button>
+        </div>
       </div>
     </section>
   )
