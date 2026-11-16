@@ -57,13 +57,23 @@ export default function About({ onBack, onProjects }) {
       className="about-section"
       aria-label="About me"
     >
-      {/* the photo is the section background, so it is decorative here */}
+      {/* the photo is the section background, so it is decorative here.
+          The two extra copies are the glitch layers (see .about-bg-glitch). */}
       <div
         className="about-bg"
         style={{ backgroundImage: `url(${myPic})` }}
         aria-hidden="true"
       />
-      <div className="about-bg-fade" aria-hidden="true" />
+      <div
+        className="about-bg about-bg-glitch"
+        style={{ backgroundImage: `url(${myPic})` }}
+        aria-hidden="true"
+      />
+      <div
+        className="about-bg about-bg-glitch is-cyan"
+        style={{ backgroundImage: `url(${myPic})` }}
+        aria-hidden="true"
+      />
 
       <div className="about-card">
         <div className="about-grid about-grid--solo">
@@ -97,18 +107,17 @@ export default function About({ onBack, onProjects }) {
               <a className="btn btn-primary" href="mailto:modislebogang@gmail.com">
                 Hire me
               </a>
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={onProjects}
+              >
+                scroll down ▾
+              </button>
               <button type="button" className="about-back" onClick={onBack}>
                 <span aria-hidden="true">↑</span> back to top
               </button>
             </div>
-
-            <button
-              type="button"
-              className="scroll-hint section-next"
-              onClick={onProjects}
-            >
-              see my projects ▾
-            </button>
           </div>
         </div>
       </div>

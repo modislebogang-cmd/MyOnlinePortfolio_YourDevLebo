@@ -1108,12 +1108,59 @@
   background-position: right 2% bottom;
   background-size: auto 100%;
   opacity: 1;
-  /* black & white portrait, with a soft green rim so it still sits in the
-     neon theme */
-  filter: grayscale(1) contrast(1.15) brightness(1.1)
-    drop-shadow(0 0 60px rgba(0, 255, 102, 0.35));
+  /* black & white portrait; no drop shadow, so no dark halo around it */
+  filter: grayscale(1) contrast(1.15) brightness(1.1);
   pointer-events: none;
   animation: AboutBgIn 1.2s ease-out both;
+}
+
+/* glitch copies of the portrait: the same background, sliced and offset in
+   red / cyan, with a very short "jump" in the cycle so it reads as a glitch
+   rather than a constant offset */
+.about-bg-glitch {
+  z-index: 0;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  animation: AboutGlitch 3.4s steps(1, end) infinite;
+}
+
+.about-bg-glitch.is-cyan {
+  animation-delay: -1.7s;
+  animation-duration: 2.9s;
+}
+
+@keyframes AboutGlitch {
+  0%,
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+    filter: grayscale(1) drop-shadow(3px 0 0 rgba(255, 46, 106, 0.9));
+  }
+  6% {
+    clip-path: inset(14% 0 58% 0);
+    transform: translate(-7px, 0);
+  }
+  8% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+  }
+  40% {
+    clip-path: inset(52% 0 24% 0);
+    transform: translate(8px, 0);
+    filter: grayscale(1) drop-shadow(-4px 0 0 rgba(53, 241, 255, 0.9));
+  }
+  43% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+  }
+  68% {
+    clip-path: inset(26% 0 48% 0);
+    transform: translate(-5px, 1px);
+  }
+  70% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+  }
 }
 
 /* the photo is the background, so the card is just a frame: no fill, no
@@ -1132,39 +1179,10 @@
   animation: StageIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* keep the text off the portrait: the copy gets its own dark panel that
-   fades out toward the photo instead of ending on a hard edge */
+/* the copy sits directly on the dark page gradient — no shadow panel */
 .about-grid--solo .about-copy {
-  padding: clamp(14px, 2vw, 22px);
-  background: linear-gradient(
-    100deg,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.7) 55%,
-    rgba(0, 0, 0, 0.3) 85%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-
-/* fades the photo into the dark page so the card stays readable */
-.about-bg-fade {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.92) 0%,
-      rgba(0, 0, 0, 0.6) 40%,
-      rgba(0, 0, 0, 0) 68%,
-      rgba(0, 0, 0, 0.25) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0) 30%,
-      rgba(0, 0, 0, 0.55) 100%
-    );
+  padding: clamp(4px, 1vw, 12px);
+  background: transparent;
 }
 
 @keyframes AboutBgIn {
@@ -1365,24 +1383,9 @@
     opacity: 0.85;
   }
 
-  .about-bg-fade {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.15) 0%,
-        rgba(0, 0, 0, 0.55) 30%,
-        rgba(0, 0, 0, 0.85) 55%,
-        rgba(0, 0, 0, 0.9) 100%
-      );
-  }
-
   .about-section {
     align-content: start;
     padding-top: clamp(150px, 40vh, 300px);
-  }
-
-  .about-grid--solo .about-copy {
-    background: rgba(0, 0, 0, 0.78);
   }
 }
 
@@ -1391,6 +1394,10 @@
   .about-photo,
   .about-bg {
     animation: none;
+  }
+
+  .about-bg-glitch {
+    display: none;
   }
 
   .stack-item,
