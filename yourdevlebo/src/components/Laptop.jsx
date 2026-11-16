@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import myPic from '../assets/mypic-nobg.png'
+import myPic from '../assets/mypic-face.png'
 
 const CODE_LINES = [
   'const dev = {',
@@ -43,11 +43,26 @@ export default function Laptop({ open, onOpened }) {
       <div className="laptop-screen">
         <div className="screen-bezel">
           <div className="screen-content">
-            <img
-              className="screen-photo"
-              src={myPic}
-              alt="YourDevLebo"
-            />
+            <div className="screen-photo-wrap">
+              <img
+                className="screen-photo"
+                src={myPic}
+                alt="YourDevLebo"
+              />
+              {/* glitch copies: same image, sliced and offset in CSS */}
+              <img
+                className="screen-photo screen-photo-glitch"
+                src={myPic}
+                alt=""
+                aria-hidden="true"
+              />
+              <img
+                className="screen-photo screen-photo-glitch is-cyan"
+                src={myPic}
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
             <pre className="screen-code" aria-hidden="true">
               {typed}
               <span className="caret">_</span>

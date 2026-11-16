@@ -24,7 +24,8 @@ import myPic from '../assets/mypic-nobg.png'
  *  3. the technologies used to design / build websites, shown as icons only
  *     (JS, React, Vite, Node, npm, Git, GitHub, Firebase)
  *
- * `onBack` scrolls back up to the home page.
+ * `onBack` scrolls back up to the home page, `onProjects` scrolls down to the
+ * projects section.
  */
 const STACK = [
   { name: 'JavaScript', Logo: JavaScriptLogo },
@@ -37,7 +38,7 @@ const STACK = [
   { name: 'Firebase', Logo: FirebaseLogo },
 ]
 
-export default function About({ onBack }) {
+export default function About({ onBack, onProjects }) {
   const sectionRef = useRef(null)
 
   // Escape scrolls back up, same as the back button.
@@ -93,13 +94,21 @@ export default function About({ onBack }) {
 
             {/* 4. call to action */}
             <div className="about-cta">
-              <a className="btn btn-primary" href="mailto:hello@yourdevlebo.dev">
+              <a className="btn btn-primary" href="mailto:modislebogang@gmail.com">
                 Hire me
               </a>
               <button type="button" className="about-back" onClick={onBack}>
                 <span aria-hidden="true">↑</span> back to top
               </button>
             </div>
+
+            <button
+              type="button"
+              className="scroll-hint section-next"
+              onClick={onProjects}
+            >
+              see my projects ▾
+            </button>
           </div>
         </div>
       </div>

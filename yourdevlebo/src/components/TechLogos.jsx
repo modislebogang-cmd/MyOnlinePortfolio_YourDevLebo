@@ -181,3 +181,107 @@ export function NodeLogo({ size = 48 }) {
     </svg>
   )
 }
+
+/* ---- contact / social icons -------------------------------- */
+
+export function EmailLogo({ size = 48 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-label="Email"
+    >
+      <rect x="2" y="4" width="20" height="16" rx="3" fill="#00ff66" />
+      <path
+        fill="#04120d"
+        d="M4.5 7.2 12 12.6l7.5-5.4v1.9L12 14.7 4.5 9.1V7.2Z"
+      />
+    </svg>
+  )
+}
+
+export function WhatsAppLogo({ size = 48 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-label="WhatsApp"
+    >
+      <path
+        fill="#25d366"
+        d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"
+      />
+      <path
+        fill="#fff"
+        d="M8.9 7.3c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.2 5 4.4 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.2-.7.1l-1 1.2c-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5v-.5l-1-2.3Z"
+      />
+    </svg>
+  )
+}
+
+export function TikTokLogo({ size = 48 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-label="TikTok"
+    >
+      <path
+        fill="#25f4ee"
+        d="M15.5 3h2.6c.2 1.6 1.1 3 2.4 3.8v2.7a7.4 7.4 0 0 1-3.6-1.1v5.9a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v2.8a3.1 3.1 0 1 0 2.2 3V3Z"
+      />
+      <path
+        fill="#fe2c55"
+        d="M14.9 2.4h2.6c.2 1.6 1.1 3 2.4 3.8v2.7a7.4 7.4 0 0 1-3.6-1.1v5.9a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v2.8a3.1 3.1 0 1 0 2.2 3V2.4Z"
+        opacity=".85"
+      />
+      <path
+        fill="#fff"
+        d="M15.2 2.7h2.6c.2 1.6 1.1 3 2.4 3.8v2.7a7.4 7.4 0 0 1-3.6-1.1v5.9a5.9 5.9 0 1 1-5.9-5.9c.3 0 .6 0 .9.1v2.8a3.1 3.1 0 1 0 2.2 3V2.7Z"
+        opacity=".35"
+      />
+    </svg>
+  )
+}
+
+export function FacebookLogo({ size = 48 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-label="Facebook"
+    >
+      <circle cx="12" cy="12" r="10" fill="#1877f2" />
+      <path
+        fill="#fff"
+        d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.8h2.5v7h3Z"
+      />
+    </svg>
+  )
+}
+
+export function LinkedInLogo({ size = 48 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      role="img"
+      aria-label="LinkedIn"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="4" fill="#0a66c2" />
+      <path
+        fill="#fff"
+        d="M7.1 9.4H4.9V19h2.2V9.4ZM6 8.2a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6ZM19.1 19h-2.2v-4.9c0-1.2-.4-2-1.5-2-.8 0-1.3.6-1.5 1.1-.1.2-.1.5-.1.8V19H11.6s0-8.7 0-9.6h2.2v1.4c.3-.5 1-1.2 2.4-1.2 1.7 0 3 1.1 3 3.6V19Z"
+      />
+    </svg>
+  )
+}

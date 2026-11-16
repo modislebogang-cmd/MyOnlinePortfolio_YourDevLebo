@@ -1,0 +1,7 @@
+fix the following on my website and get it ready for live production
+turn off mouse scroll for all pages of my website.
+1. on home page fix the following:
+				1.1 move scroll down  button next about me button and dont change anything just make it button like about me button.
+				1.2 fix my picture to only show on my face in enough size to fix laptop screen card also make add the glitch effect on the picture
+				1.3 turning your idea into live website make it like someone its writting it using type writter sound and different font
+				1.4 also fix add slow glitch effect on name YourDevLebo
